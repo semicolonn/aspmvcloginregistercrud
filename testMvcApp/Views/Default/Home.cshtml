@@ -1,0 +1,44 @@
+﻿@model testMvcApp.Models.student
+
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Home</h2>
+<!--
+    <form class="" action="Home" method="post" enctype="multipart/form-data">
+        <label for="book">Book Name</label>
+        <br />
+
+       <input type="text" name="bookname" />
+       <br />
+        <label for="myfile">Select a file:</label>
+        <br />
+
+        <input type="file" id="myfile" name="myfile">
+        <br />
+        <input type="submit" name="submit" value="Submit" />
+    </form>
+    -->
+
+
+            <div class="jumbotron">
+                File Uploading...
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                   @using (
+
+                       Html.BeginForm("Home", "Default", FormMethod.Post, new { enctype="multipart/form-data"}))
+                   {
+
+
+                       <input type="file" name="files" /><br />
+                       <input type="submit" name="submit" value="Upload"/>
+                   }
+                </div>
+            </div>
+
+

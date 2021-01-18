@@ -1,0 +1,27 @@
+﻿@model testMvcApp.Models.book
+
+@{
+    ViewBag.Title = "cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cart</h2>
+
+
+
+<div class="jumbotron">
+    File Uploading...
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        @using (
+
+         Html.BeginForm("Home", "Default", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+
+
+        }
+    </div>
+</div>
+

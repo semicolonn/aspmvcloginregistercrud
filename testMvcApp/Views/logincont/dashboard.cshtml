@@ -1,0 +1,25 @@
+﻿@model testMvcApp.Models.authtable
+
+@{
+    ViewBag.Title = "dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>dashboard</h2>
+
+<div class="card-header">
+    Welcome
+</div>
+<div class="card-body">
+    @if (Session["FullName"] != null)
+    {
+        <p>Name: @Session["FullName"].ToString()</p>
+        <a href="@Url.Action("logOut","logincont")" class="btn btn-warning">Logout</a>
+    }
+    else
+    {
+
+        Response.Redirect("~/logincont/login");
+    }
+</div>
